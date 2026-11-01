@@ -1,0 +1,24 @@
+# Environment files and local credentials
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.keystore
+**/credentials*.json
+**/secrets*.json
+**/service-account*.json
+**/.azure/
+**/SampleFiles/
+
+# Dependencies, build output, and IDE state
+**/node_modules/
+**/bin/
+**/obj/
+**/dist/
+**/dist-ssr/
+**/build/
+**/coverage/
+**/.vs/

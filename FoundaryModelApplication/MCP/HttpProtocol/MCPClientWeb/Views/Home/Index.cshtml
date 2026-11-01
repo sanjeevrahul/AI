@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "MCP Calculator";
+}
+
+<h1>MCP Calculator</h1>
+
+<div>
+    <input
+        id="message"
+        type="text"
+        placeholder="Ask something..."
+        style="width:400px;" />
+
+    <button onclick="sendMessage()">
+        Send
+    </button>
+</div>
+
+<br />
+
+<div id="result"></div>
+
+<script>
+
+    let conversationId = crypto.randomUUID();
+
+    async function sendMessage() {
+
+        const message =
+            document.getElementById("message").value;
+
+        if (!message.trim()) {
+            return;
+        }
+
+        const result =
+            document.getElementById("result");
+
+        result.innerHTML =
+            "Calling Microsoft Foundry...";
+
+        try {
+
+            const response =
+                await fetch("/api/chat", {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        conversationId: conversationId,
+                        message: message
+                    })
+                });
+
+
+            if (!response.ok) {
+
+                const error =
+                    await response.text();
+
+                throw new Error(
+                    `${response.status}: ${error}`);
+            }
+
+
+            const data =
+                await response.json();
+
+
+            result.innerHTML =
+                `<strong>Assistant:</strong> ${data.message}`;
+
+        }
+        catch (error) {
+
+            result.innerHTML =
+                `<strong>Error:</strong> ${error.message}`;
+        }
+    }
+
+</script>

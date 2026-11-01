@@ -1,0 +1,32 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.6.0">
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyConsoleApp\MyConsoleApp.csproj" />
+    <ProjectReference Include="..\MyWebApp\MyWebApp.csproj" />
+    <ProjectReference Include="..\MyWebApi\MyWebApi.csproj" />
+    <ProjectReference Include="..\..\FoundaryModelApplication\FoundaryModelUsingWebAPI\FoundaryModelUsingWebAPI.csproj" AspireProjectMetadataTypeName="FoundaryModelUsingWebAPI" />
+    <ProjectReference Include="..\..\FoundaryModelApplication\FoundaryModelUtilityServices\FoundaryModelUtilityServices.csproj" AspireProjectMetadataTypeName="FoundaryModelUtilityServices" />
+    <ProjectReference Include="..\..\FoundaryModelApplication\MCP\HttpProtocol\MCPServerHttp\MCPServerHttp.csproj" AspireProjectMetadataTypeName="MCPServerHttp" />
+    <ProjectReference Include="..\..\FoundaryModelApplication\MCP\HttpProtocol\MCPClientWeb\MCPClientWeb.csproj" AspireProjectMetadataTypeName="MCPClientWeb" />
+    <ProjectReference Include="..\..\FoundaryModelApplication\MAF\FoundryAgent\FoundryAgent.csproj" AspireProjectMetadataTypeName="FoundryAgentConsole" />
+    <ProjectReference Include="..\..\FoundaryModelApplication\MAF\FoundryAgentWeb\FoundryAgent.csproj" AspireProjectMetadataTypeName="FoundryAgentWebConsole" />
+    <ProjectReference Include="..\..\FoundaryModelApplication\GeneralDocumentProcesor\DocumentProcesor.csproj" AspireProjectMetadataTypeName="GeneralDocumentProcessor" />
+    <ProjectReference Include="..\..\FoundaryModelApplication\DrivingLicenseDocumentProcesor\DocumentProcesor.csproj" AspireProjectMetadataTypeName="DrivingLicenseDocumentProcessor" />
+    <ProjectReference Include="..\..\FoundaryModelApplication\DrivingLicenseDocumentProcesorStructured\DocumentProcesor.csproj" AspireProjectMetadataTypeName="StructuredDrivingLicenseDocumentProcessor" />
+    <ProjectReference Include="..\..\FoundaryModelApplication\MCP\STDIOProtocol\McpCalculatorServerSTDIO\McpCalculatorServer.csproj" AspireProjectMetadataTypeName="McpCalculatorServerSTDIO" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Aspire.Hosting.Ollama" Version="13.6.1-beta.935" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AspireUseCliBundle>true</AspireUseCliBundle>
+    <UserSecretsId>b6fe1cdf-dc6e-4aab-be18-13132c014007</UserSecretsId>
+  </PropertyGroup>
+
+</Project>

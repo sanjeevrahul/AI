@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AspireSetup.AppHost/AspireSetup.AppHost.csproj" />
+  <Project Path="MyConsoleApp/MyConsoleApp.csproj" />
+  <Project Path="MyWebApi/MyWebApi.csproj" />
+  <Project Path="MyWebApp/MyWebApp.csproj" />
+</Solution>
